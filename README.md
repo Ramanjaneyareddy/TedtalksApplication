@@ -44,8 +44,7 @@ It supports CRUD operations, CSV import, and simple speaker influence analysis.
 1. **Clone the repository**
 
 ```bash
-git clone <repository-url>
-cd tedtalks-api
+git clone https://github.com/Ramanjaneyareddy/TedtalksApplication.git
 Build the project
 
 bash
