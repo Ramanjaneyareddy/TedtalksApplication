@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "3eb3a04e-23e4-4db4-b270-adc9cf319aa2",
+		"name": "TedTalksApi-Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5928636"
+	},
+	"item": [
+		{
+			"name": "TedTalks - Get All Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/talks",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"talks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TedTalks - Import Data from Excel sheet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/tedTalks/import?path=/C:/Users/Ramu/Downloads/TedTalksApplication/src/main/resources/data.csv",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"tedTalks",
+						"import"
+					],
+					"query": [
+						{
+							"key": "path",
+							"value": "/C:/Users/Ramu/Downloads/TedTalksApplication/src/main/resources/data.csv"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TedTalks - Add new Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"Title1\",\r\n        \"author\": \"Author1\",\r\n        \"date\": \"December 2025\",\r\n        \"views\": 1200,\r\n        \"likes\": 12,\r\n        \"link\": \"https://ted.com/talks/title1\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/tedTalks",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"tedTalks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TedTalks - Get Article by title",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tedTalks/tedTalkPerYear?year=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tedTalks",
+						"tedTalkPerYear"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TedTalks - Update Article by title",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"Title1\",\r\n        \"author\": \"AuthorUpdating\",\r\n        \"date\": \"December 2025\",\r\n        \"views\": 1200,\r\n        \"likes\": 12,\r\n        \"link\": \"https://ted.com/talks/title1\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tedTalks/title1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tedTalks",
+						"title1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TedTalks - Delete article by title",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tedTalks/title1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tedTalks",
+						"title1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TedTalks - Analysis ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseURL}}/tedTalks/analysis?topNumber=5",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"tedTalks",
+						"analysis"
+					],
+					"query": [
+						{
+							"key": "topNumber",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TedTalks - Get by Title",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/tedTalks/getByTitle?title=The surprisingly long history of electric cars",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"tedTalks",
+						"getByTitle"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "The surprisingly long history of electric cars"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
